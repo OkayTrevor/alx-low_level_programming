@@ -1,15 +1,13 @@
 #include "main.h"
-#include <stdio.h>
-#include <stdlib.h>
 
 /**
- * read_textfile - reads a textfile and prints it to the POSIX standard output
- * @filename: pointer to the file name
- * @letters: the number of letters it should read and print
- * Return: the actual number of letters it could read and print
+ * read_textfile - reads a text file and prints it to the standard output
+ * @filename: name of the file to be read
+ * @letters: number of letters to read and print
+ *
+ * Return: the number of letters printed, or 0 if it failed
  */
-
-ssize_t read_textfile(const char *filename, size_t letters);
+ssize_t read_textfile(const char *filename, size_t letters)
 {
 	int fd;
 	int s, t;
@@ -22,7 +20,7 @@ ssize_t read_textfile(const char *filename, size_t letters);
 	if (fd < 0)
 		return (0);
 
-	buf = malloc(sizeof(char) *  letters);
+	buf = malloc(sizeof(char) * letters);
 	if (!buf)
 		return (0);
 
