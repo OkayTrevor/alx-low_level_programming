@@ -4,7 +4,8 @@
 #include <stdlib.h>
 #include <sys/types.h>
 #include <fcntl.h>
-
+#include <sys/stat.h>
+#include <fcntl.h>
 #include <unistd.h>
 
 int _putchar(char c);
